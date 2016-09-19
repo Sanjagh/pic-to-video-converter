@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * @author Mahmood
@@ -18,7 +19,12 @@ public class ApplicationRunner {
 
         Converter converter = new ConverterImpl();
         try {
-            converter.convert("C:\\Program Files\\ffmpeg\\win64-static\\bin\\ffmpeg.exe", "", "", "E:\\pics", "final", 4, null, "Sec", 3);
+            ArrayList<String> voices = new ArrayList<>();
+            voices.add("1.mp3");
+            voices.add("2.mp3");
+            voices.add("3.mp3");
+            converter.convert("C:\\Program Files\\ffmpeg\\win64-static\\bin\\ffmpeg.exe", "", "", "E:\\pics", "final",
+                    4, voices, "Sec", 3);
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
