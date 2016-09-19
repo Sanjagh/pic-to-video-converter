@@ -54,6 +54,23 @@ public class ConverterImpl implements Converter {
         logger.info("wait result for final video : {}", waitResultAudio);
         logger.info("video is created for cartoon : {}", videoFileName);
 
+        deleteUnnecessaryFiles(videoFileName, segmentCount, imagesPath);
+
+    }
+
+    @SuppressWarnings("ResultOfMethodCallIgnored")
+    private void deleteUnnecessaryFiles(String videoFileName, int segmentCount, String path) {
+
+        for (int i = 0; i < segmentCount; i++) {
+            File file = new File(path + "/" + videoFileName + "_" + i + ".mp4");
+            if (file.exists()) {
+                file.delete();
+            }
+        }
+        File file = new File(path + "/" + "video.txt");
+        if (file.exists()) {
+            file.delete();
+        }
 
     }
 
