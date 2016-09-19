@@ -37,7 +37,7 @@ public interface Converter {
      * @param imagesPath images folder path
      * @param videoFileName final video file name
      * @param framerate framerate of video (for 100 images and framerate 25, the result will be 4 seconds video)
-     * @param audioFileName names of audio files, audio files must be in images folder
+     * @param audioFileName names of audio files, audio files must be placed in images folder, also time length of each audio section file should be as same as video section result.
      * @param segmentPrefix image name must be in PREFIX_i_dddddd.jpg format, i is the segment number started from 0, and dddddd
      *                      is the number of image of that segment started from 000000, for each segment numbers must be reset.
      * @param segmentCount segment count of videos,
