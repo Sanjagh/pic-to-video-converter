@@ -30,7 +30,12 @@ public interface Converter {
      * in audioFileName parameter. audio files
      * <br>
      * call example : <br>
-     * <code>converter.convert("C:\\Program Files\\ffmpeg\\win64-static\\bin\\ffmpeg.exe", "", "", "E:\\pics", "final", 4, null, "Sec", 3);</code>
+     * <code> ArrayList voices = new ArrayList() <br>
+     * voices.add("1.mp3");<br>
+     * voices.add("2.mp3");<br>
+     * voices.add("3.mp3");<br>
+     * converter.convert("C:\\Program Files\\ffmpeg\\win64-static\\bin\\ffmpeg.exe", "", "", "E:\\pics", "final",4, voices, "Sec", 3);<br>
+     * </code>
      * @param ffmpegPath indicate ffmpeg path
      * @param ffmpegOptions ffmpeg option for convert images to video
      * @param ffmpegConcatOptions ffmpeg option for concat video results
